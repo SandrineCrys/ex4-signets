@@ -32,6 +32,9 @@ export default function ListeDossiers({utilisateur, etatDossiers}) {
   );
 
   return (
+
+    dossiers!='' ?
+    <>
     <ul className="ListeDossiers">
       {
         dossiers.map( 
@@ -39,5 +42,8 @@ export default function ListeDossiers({utilisateur, etatDossiers}) {
         )
       }
     </ul>
+    </>
+    :
+    <div className="messageVide">votre liste est vide <h1>;-(</h1></div>
   );
 }
